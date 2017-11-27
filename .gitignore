@@ -1,0 +1,17 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+/resources/assets
+/app/Helpers/helpers.php.bat
+/app/Console/Commands/StartCodeMs.php.bat
+ins.lock
+code.lock
