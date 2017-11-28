@@ -82,14 +82,17 @@ class SettingRepositoryEloquent extends BaseRepository implements SettingReposit
 
     public function saveSetting($data)
     {
-        $newData = collect($data)->map(function ($item,$k){
-            return ['key' => $k,'value' => $item];
-        });
-
+        $newData = [];
+        foreach ($data as $key => $value) {
+            if (!is_array($value)) {
+                $newData[$key]['key'] = $key;
+                $newData[$key]['value'] = $value;
+            }
+        }
         DB::beginTransaction();
         try{
             DB::table('settings')->delete();
-            DB::table('settings')->insert($newData->toArray());
+            DB::table('settings')->insert($newData);
             DB::commit();
             return response()->json(['status' => 'success','message' => '设置成功']);
         }catch (QueryException $ex) {
