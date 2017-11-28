@@ -20,6 +20,8 @@
 ### 1.5、域名配置
 
 ***vhost.conf里面的域名指向目录务必指向项目的public目录,不能指向根目录***
+***如果遇到`
+Warning: require(): open_basedir restriction in effect. File(/www/wwwroot/pinche.com/vendor/autoload.php) is not within the allowed path(s): (/www/wwwroot/pinche.com/public/:/tmp/:/proc/) in /www/wwwroot/pinche.com/public/index.php on line 24`这种错误,需要在vhost里面将/www/wwwroot/pinche.com/public/:/tmp/:/proc/修改为/www/wwwroot/pinche.com/:/tmp/:/proc/***
 
 ## 2、后台配置
 
