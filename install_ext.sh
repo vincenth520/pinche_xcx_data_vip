@@ -13,6 +13,7 @@ read PHP_HOME
 
 cd install_data/php-beast-master
 $PHP_HOME/bin/phpize
+chmod +x ./configure
 ./configure --with-php-config=$PHP_HOME/bin/php-config
 
 #compile
