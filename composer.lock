@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "69dfcd16f3abd8a405f108ad2fed08b0",
+    "content-hash": "38aec75ae75db5d58754989f50ae0554",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -957,7 +957,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/laravel/framework/2404af887ca8272d721628a99bbc721ac3b692e7.zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/2404af887ca8272d721628a99bbc721ac3b692e7",
                 "reference": "2404af887ca8272d721628a99bbc721ac3b692e7",
                 "shasum": ""
             },
@@ -1873,7 +1873,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/phpDocumentor/ReflectionDocBlock/bf329f6c1aadea3299f08ee804682b7c45b326a2.zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/bf329f6c1aadea3299f08ee804682b7c45b326a2",
                 "reference": "bf329f6c1aadea3299f08ee804682b7c45b326a2",
                 "shasum": ""
             },
@@ -1965,7 +1965,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/phpseclib/phpseclib/c9a3fe35e20eb6eeaca716d6a23cde03f52d1558.zip",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c9a3fe35e20eb6eeaca716d6a23cde03f52d1558",
                 "reference": "c9a3fe35e20eb6eeaca716d6a23cde03f52d1558",
                 "shasum": ""
             },
@@ -2406,7 +2406,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/bobthecow/psysh/b1d289c2cb03a2f8249912c53e96ced38f879926.zip",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/b1d289c2cb03a2f8249912c53e96ced38f879926",
                 "reference": "b1d289c2cb03a2f8249912c53e96ced38f879926",
                 "shasum": ""
             },
@@ -2667,7 +2667,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/console/63cd7960a0a522c3537f6326706d7f3b8de65805.zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/63cd7960a0a522c3537f6326706d7f3b8de65805",
                 "reference": "63cd7960a0a522c3537f6326706d7f3b8de65805",
                 "shasum": ""
             },
@@ -2735,7 +2735,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/css-selector/66e6e046032ebdf1f562c26928549f613d428bd1.zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/66e6e046032ebdf1f562c26928549f613d428bd1",
                 "reference": "66e6e046032ebdf1f562c26928549f613d428bd1",
                 "shasum": ""
             },
@@ -2788,7 +2788,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/debug/74557880e2846b5c84029faa96b834da37e29810.zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/74557880e2846b5c84029faa96b834da37e29810",
                 "reference": "74557880e2846b5c84029faa96b834da37e29810",
                 "shasum": ""
             },
@@ -2844,7 +2844,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/event-dispatcher/271d8c27c3ec5ecee6e2ac06016232e249d638d9.zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/271d8c27c3ec5ecee6e2ac06016232e249d638d9",
                 "reference": "271d8c27c3ec5ecee6e2ac06016232e249d638d9",
                 "shasum": ""
             },
@@ -2907,7 +2907,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/finder/138af5ec075d4b1d1bd19de08c38a34bb2d7d880.zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/138af5ec075d4b1d1bd19de08c38a34bb2d7d880",
                 "reference": "138af5ec075d4b1d1bd19de08c38a34bb2d7d880",
                 "shasum": ""
             },
@@ -2956,7 +2956,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/http-foundation/5943f0f19817a7e05992d20a90729b0dc93faf36.zip",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/5943f0f19817a7e05992d20a90729b0dc93faf36",
                 "reference": "5943f0f19817a7e05992d20a90729b0dc93faf36",
                 "shasum": ""
             },
@@ -3009,7 +3009,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/http-kernel/a2a942172b742217ab2ccd9399494af2aa17c766.zip",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/a2a942172b742217ab2ccd9399494af2aa17c766",
                 "reference": "a2a942172b742217ab2ccd9399494af2aa17c766",
                 "shasum": ""
             },
@@ -3154,7 +3154,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/process/a56a3989fb762d7b19a0cf8e7693ee99a6ffb78d.zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/a56a3989fb762d7b19a0cf8e7693ee99a6ffb78d",
                 "reference": "a56a3989fb762d7b19a0cf8e7693ee99a6ffb78d",
                 "shasum": ""
             },
@@ -3263,7 +3263,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/routing/cf7fa1dfcfee2c96969bfa1c0341e5627ecb1e95.zip",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/cf7fa1dfcfee2c96969bfa1c0341e5627ecb1e95",
                 "reference": "cf7fa1dfcfee2c96969bfa1c0341e5627ecb1e95",
                 "shasum": ""
             },
@@ -3341,7 +3341,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/translation/373e553477e55cd08f8b86b74db766c75b987fdb.zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/373e553477e55cd08f8b86b74db766c75b987fdb",
                 "reference": "373e553477e55cd08f8b86b74db766c75b987fdb",
                 "shasum": ""
             },
@@ -3406,7 +3406,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/805de6bd6869073e60610df1b14ab7d969c61b01.zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/805de6bd6869073e60610df1b14ab7d969c61b01",
                 "reference": "805de6bd6869073e60610df1b14ab7d969c61b01",
                 "shasum": ""
             },
@@ -3771,7 +3771,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/filp/whoops/c6081b8838686aa04f1e83ba7e91f78b7b2a23e6.zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/c6081b8838686aa04f1e83ba7e91f78b7b2a23e6",
                 "reference": "c6081b8838686aa04f1e83ba7e91f78b7b2a23e6",
                 "shasum": ""
             },
@@ -5183,52 +5183,6 @@
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2017-04-07T12:08:54+00:00"
-        },
-        {
-            "name": "yunpian/yunpian-php-sdk",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yunpian/yunpian-php-sdk.git",
-                "reference": "ca3a6e09e89e34c1b4c97074a0924facf2c83cfb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/yunpian/yunpian-php-sdk/ca3a6e09e89e34c1b4c97074a0924facf2c83cfb.zip",
-                "reference": "ca3a6e09e89e34c1b4c97074a0924facf2c83cfb",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~6.0",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~5.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Yunpian\\Sdk\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "dzh",
-                    "email": "daizhong@yunpian.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Yunpian PHP SDK",
-            "homepage": "https://github.com/yunpian/yunpian-php-sdk",
-            "keywords": [
-                "sdk",
-                "yunpian"
-            ],
-            "time": "2017-03-27T03:38:36+00:00"
         }
     ],
     "aliases": [],

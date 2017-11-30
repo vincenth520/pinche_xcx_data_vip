@@ -1,0 +1,1 @@
+2017-11-30 15:54:56	<?xml version="1.0" encoding="utf-8" ?><error_response><code>11</code><msg>Insufficient isv permissions</msg><sub_code>isv.permission-api-package-limit</sub_code><sub_msg>scope ids is 11022 11600 11863</sub_msg><request_id>13yk3rb1sg3pw</request_id></error_response><!--top010179031187.s.et2-->
