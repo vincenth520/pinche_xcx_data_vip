@@ -15,7 +15,7 @@ use Aliyun\Core\DefaultAcsClient;
 use Aliyun\Api\Sms\Request\V20170525\SendSmsRequest;
 use Aliyun\Api\Sms\Request\V20170525\QuerySendDetailsRequest;
 use Illuminate\Support\Facades\Cache;
-
+use Log;
 
 class Sms
 {
@@ -68,6 +68,7 @@ class Sms
         {
             return responseJson(true,'发送成功');
         }
+        Log::error($phone.':'.$acsResponse->Code);
         return responseJson(false,$acsResponse->Code,'',422);
     }
 
