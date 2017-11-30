@@ -60,7 +60,7 @@ class Sms
         $request->setTemplateCode(getConfig('sms_TemplateCode'));
 
         $code = self::setCode($phone);
-        $request->setTemplateParam($code);
+        $request->setTemplateParam("{\"code\":\"".$code."\"}");
 
         $acsResponse =  $acsClient->getAcsResponse($request);
         // 默认返回stdClass，通过返回值的Code属性来判断发送成功与否
