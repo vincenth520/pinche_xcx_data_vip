@@ -68,7 +68,7 @@ class Sms
         {
             return responseJson(true,'发送成功');
         }
-        Log::error($phone.':'.$acsResponse->Code);
+        Log::error('【sms-error】'.$phone.':'.$acsResponse->Code);
         return responseJson(false,$acsResponse->Code,'',422);
     }
 
