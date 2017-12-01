@@ -54,6 +54,7 @@ class MessageRepositoryEloquent extends BaseRepository implements MessageReposit
         $res = Message::where('messages.user_id',getUserIdBysk($data['sk']))
             ->where('messages.type',$data['type'])
             ->leftJoin('customers', 'customers.id', '=', 'messages.from_id')
+            ->orderBy('messages.created_at','desc')
             ->paginate(15,$columns = ['messages.*','customers.nickName','customers.avatarUrl']);
         Message::where('type',$data['type'])->update(['see' => 1]);
         return $res;
