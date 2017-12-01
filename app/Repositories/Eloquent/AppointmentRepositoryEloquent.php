@@ -109,7 +109,7 @@ class AppointmentRepositoryEloquent extends BaseRepository implements Appointmen
         }else{
             $message = '拒绝了您的拼车请求';
         }
-        MessageRepositoryEloquent::addMessage('notice',$info['user_id'],$appointment['user_id'],$message,'/pages/appointment/index?id='.$appointment['info_id']);
+        MessageRepositoryEloquent::addMessage('notice',$appointment['user_id'],$info['user_id'],$message,'/pages/appointment/index?id='.$appointment['info_id']);
 
         return responseJson(true,'操作成功',$appointment);
     }
