@@ -58,7 +58,7 @@ class AppointmentRepositoryEloquent extends BaseRepository implements Appointmen
         }
         $res = $this->create($newData);
         $info = InfoRepositoryEloquent::getUserIdByInfo($data['info_id']);
-        MessageRepositoryEloquent::addMessage('notice',$info['user_id'],$newData['user_id'],'预约了您发布的拼车信息,请及时处理 ','/pages/appointment/index?id='.$data['info_id']);
+        MessageRepositoryEloquent::addMessage('notice',$info['user_id'],$newData['user_id'],'预约了您发布的拼车信息,请及时处理 ','/pages/appointment/index?id='.$appointment['id']);
 
         return responseJson(true,'预约成功',$res);
     }
@@ -109,7 +109,7 @@ class AppointmentRepositoryEloquent extends BaseRepository implements Appointmen
         }else{
             $message = '拒绝了您的拼车请求';
         }
-        MessageRepositoryEloquent::addMessage('notice',$appointment['user_id'],$info['user_id'],$message,'/pages/appointment/index?id='.$appointment['info_id']);
+        MessageRepositoryEloquent::addMessage('notice',$appointment['user_id'],$info['user_id'],$message,'/pages/appointment/index?id='.$appointment['id']);
 
         return responseJson(true,'操作成功',$appointment);
     }
