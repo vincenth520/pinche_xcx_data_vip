@@ -34,3 +34,5 @@ Warning: require(): open_basedir restriction in effect. File(/www/wwwroot/pinche
 - 首次运行务必先在系统设置里面配置好`小程序设置` `短信设置` `存储设定` 
 
 
+## 预览
+!(效果演示)[http://cloud.video.taobao.com//play/u/1798224346/p/1/e/6/t/1/50052294422.mp4]
