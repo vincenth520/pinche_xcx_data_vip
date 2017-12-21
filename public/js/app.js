@@ -62571,8 +62571,6 @@ var UNSET_AUTH_USER = 'UNSET_AUTH_USER';
 
             return axios.post('login', formData).then(function (response) {
                 dispatch('loginSuccess', response.data);
-            }).catch(function (error) {
-                console.log(error.response.data.message);
             });
         },
         loginSuccess: function loginSuccess(_ref2, tokenResponse) {
@@ -62588,8 +62586,6 @@ var UNSET_AUTH_USER = 'UNSET_AUTH_USER';
             return axios.post('logout', formData).then(function (response) {
                 __WEBPACK_IMPORTED_MODULE_0__helpers_jwt__["a" /* default */].removeToken();
                 dispatch('unsetAuthUser');
-            }).catch(function (error) {
-                console.log(error.response.data.message);
             });
         }
     }
@@ -63392,6 +63388,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                             message: '登陆成功'
                         });
                         _this.$router.push({ 'name': 'home' });
+                    }).catch(function (error) {
+                        loading.close();
+                        _this.$message({
+                            type: 'error',
+                            message: error.response.data.message
+                        });
                     });
                 }
             });
@@ -64310,6 +64312,39 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -64583,199 +64618,429 @@ var render = function() {
                   attrs: { role: "tabpanel", id: "tab2" }
                 },
                 [
-                  _vm._m(2),
-                  _vm._v(" "),
                   _c("div", { staticClass: "form-group" }, [
                     _c(
                       "label",
                       {
                         staticClass: "col-md-3 control-label",
-                        attrs: { for: "sms_appkey" }
+                        attrs: { for: "sms" }
                       },
-                      [_vm._v("App Key:")]
+                      [_vm._v("短信运营商：")]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-5" }, [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.setting.sms_appkey,
-                            expression: "setting.sms_appkey"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "sms_appkey",
-                          name: "sms_appkey",
-                          type: "text"
-                        },
-                        domProps: { value: _vm.setting.sms_appkey },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                      _c("label", { staticClass: "radio-inline" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.setting.sms,
+                              expression: "setting.sms"
                             }
-                            _vm.$set(
-                              _vm.setting,
-                              "sms_appkey",
-                              $event.target.value
-                            )
+                          ],
+                          attrs: {
+                            id: "sms",
+                            name: "sms",
+                            value: "aliyun",
+                            type: "radio"
+                          },
+                          domProps: {
+                            checked: _vm._q(_vm.setting.sms, "aliyun")
+                          },
+                          on: {
+                            change: function($event) {
+                              _vm.$set(_vm.setting, "sms", "aliyun")
+                            }
                           }
-                        }
-                      }),
+                        }),
+                        _vm._v("阿里云\n                            ")
+                      ]),
                       _vm._v(" "),
-                      _c("small", { staticClass: "help-block" }, [
-                        _vm._v("App Key")
+                      _c("label", { staticClass: "radio-inline" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.setting.sms,
+                              expression: "setting.sms"
+                            }
+                          ],
+                          attrs: {
+                            id: "sms",
+                            name: "sms",
+                            value: "yunpian",
+                            type: "radio"
+                          },
+                          domProps: {
+                            checked: _vm._q(_vm.setting.sms, "yunpian")
+                          },
+                          on: {
+                            change: function($event) {
+                              _vm.$set(_vm.setting, "sms", "yunpian")
+                            }
+                          }
+                        }),
+                        _vm._v("云片\n                            ")
                       ])
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "col-md-3 control-label",
-                        attrs: { for: "sms_secret" }
-                      },
-                      [_vm._v("App Secret:")]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-5" }, [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.setting.sms_secret,
-                            expression: "setting.sms_secret"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "sms_secret",
-                          name: "sms_secret",
-                          type: "text"
-                        },
-                        domProps: { value: _vm.setting.sms_secret },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.setting,
-                              "sms_secret",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("small", { staticClass: "help-block" }, [
-                        _vm._v(" App Secret")
+                  _vm.setting.sms == "aliyun"
+                    ? _c("div", [
+                        _c("div", { staticClass: "form-group" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "col-md-3 control-label",
+                              attrs: { for: "sms_appkey" }
+                            },
+                            [_vm._v("App Key:")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-5" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.setting.sms_appkey,
+                                  expression: "setting.sms_appkey"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                id: "sms_appkey",
+                                name: "sms_appkey",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.setting.sms_appkey },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.setting,
+                                    "sms_appkey",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("small", { staticClass: "help-block" }, [
+                              _vm._v("App Key")
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "col-md-3 control-label",
+                              attrs: { for: "sms_secret" }
+                            },
+                            [_vm._v("App Secret:")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-5" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.setting.sms_secret,
+                                  expression: "setting.sms_secret"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                id: "sms_secret",
+                                name: "sms_secret",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.setting.sms_secret },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.setting,
+                                    "sms_secret",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("small", { staticClass: "help-block" }, [
+                              _vm._v(" App Secret")
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "col-md-3 control-label",
+                              attrs: { for: "SmsFreeSignName" }
+                            },
+                            [_vm._v("SmsFreeSignName:")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-5" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.setting.sms_FreeSignName,
+                                  expression: "setting.sms_FreeSignName"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                id: "SmsFreeSignName",
+                                name: "SmsFreeSignName",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.setting.sms_FreeSignName },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.setting,
+                                    "sms_FreeSignName",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("small", { staticClass: "help-block" }, [
+                              _vm._v("短信签名，传入的短信签名必须是审核通过的签名")
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "col-md-3 control-label",
+                              attrs: { for: "SmsTemplateCode" }
+                            },
+                            [_vm._v("SmsTemplateCode:")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-5" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.setting.sms_TemplateCode,
+                                  expression: "setting.sms_TemplateCode"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                id: "SmsTemplateCode",
+                                name: "SmsTemplateCode",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.setting.sms_TemplateCode },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.setting,
+                                    "sms_TemplateCode",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("small", { staticClass: "help-block" }, [
+                              _vm._v("短信模板ID")
+                            ])
+                          ])
+                        ])
                       ])
-                    ])
-                  ]),
+                    : _vm._e(),
                   _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "col-md-3 control-label",
-                        attrs: { for: "SmsFreeSignName" }
-                      },
-                      [_vm._v("SmsFreeSignName:")]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-5" }, [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.setting.sms_FreeSignName,
-                            expression: "setting.sms_FreeSignName"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "SmsFreeSignName",
-                          name: "SmsFreeSignName",
-                          type: "text"
-                        },
-                        domProps: { value: _vm.setting.sms_FreeSignName },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.setting,
-                              "sms_FreeSignName",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("small", { staticClass: "help-block" }, [
-                        _vm._v("短信签名，传入的短信签名必须是审核通过的签名")
+                  _vm.setting.sms == "yunpian"
+                    ? _c("div", [
+                        _c("div", { staticClass: "form-group" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "col-md-3 control-label",
+                              attrs: { for: "yunpian_type" }
+                            },
+                            [_vm._v("短信类型:")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-5" }, [
+                            _c("label", { staticClass: "radio-inline" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.setting.yunpian_type,
+                                    expression: "setting.yunpian_type"
+                                  }
+                                ],
+                                attrs: {
+                                  id: "yunpian_type",
+                                  name: "yunpian_type",
+                                  value: "1",
+                                  type: "radio"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.setting.yunpian_type, "1")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    _vm.$set(_vm.setting, "yunpian_type", "1")
+                                  }
+                                }
+                              }),
+                              _vm._v("国内短信\n                            ")
+                            ]),
+                            _vm._v(" "),
+                            _c("label", { staticClass: "radio-inline" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.setting.yunpian_type,
+                                    expression: "setting.yunpian_type"
+                                  }
+                                ],
+                                attrs: {
+                                  id: "yunpian_type",
+                                  name: "yunpian_type",
+                                  value: "2",
+                                  type: "radio"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.setting.yunpian_type, "2")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    _vm.$set(_vm.setting, "yunpian_type", "2")
+                                  }
+                                }
+                              }),
+                              _vm._v("国外短信\n                            ")
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "col-md-3 control-label",
+                              attrs: { for: "yunpian_apikey" }
+                            },
+                            [_vm._v("Api key:")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-5" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.setting.yunpian_apikey,
+                                  expression: "setting.yunpian_apikey"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                id: "yunpian_apikey",
+                                name: "yunpian_apikey",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.setting.yunpian_apikey },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.setting,
+                                    "yunpian_apikey",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "col-md-3 control-label",
+                              attrs: { for: "yunpian_temp" }
+                            },
+                            [_vm._v("短信模板:")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-5" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.setting.yunpian_temp,
+                                  expression: "setting.yunpian_temp"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                id: "yunpian_temp",
+                                name: "yunpian_temp",
+                                type: "text"
+                              },
+                              domProps: { value: _vm.setting.yunpian_temp },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.setting,
+                                    "yunpian_temp",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
                       ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "col-md-3 control-label",
-                        attrs: { for: "SmsTemplateCode" }
-                      },
-                      [_vm._v("SmsTemplateCode:")]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-5" }, [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.setting.sms_TemplateCode,
-                            expression: "setting.sms_TemplateCode"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "SmsTemplateCode",
-                          name: "SmsTemplateCode",
-                          type: "text"
-                        },
-                        domProps: { value: _vm.setting.sms_TemplateCode },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.setting,
-                              "sms_TemplateCode",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("small", { staticClass: "help-block" }, [
-                        _vm._v("短信模板ID")
-                      ])
-                    ])
-                  ]),
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("hr"),
                   _vm._v(" "),
-                  _vm._m(3)
+                  _vm._m(2)
                 ]
               ),
               _vm._v(" "),
@@ -65046,7 +65311,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("hr"),
                   _vm._v(" "),
-                  _vm._m(4)
+                  _vm._m(3)
                 ]
               ),
               _vm._v(" "),
@@ -65329,7 +65594,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("hr"),
                   _vm._v(" "),
-                  _vm._m(5)
+                  _vm._m(4)
                 ]
               )
             ])
@@ -65384,27 +65649,6 @@ var staticRenderFns = [
           },
           [_vm._v("保存")]
         )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c(
-        "label",
-        { staticClass: "col-md-3 control-label", attrs: { for: "sms" } },
-        [_vm._v("短信运营商：")]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-5" }, [
-        _c("label", { staticClass: "radio-inline" }, [
-          _c("input", {
-            attrs: { id: "sms", name: "sms", type: "radio", checked: "" }
-          }),
-          _vm._v("阿里大于")
-        ])
       ])
     ])
   },
