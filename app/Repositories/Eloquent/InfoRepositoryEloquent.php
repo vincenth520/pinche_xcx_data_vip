@@ -109,8 +109,8 @@ class InfoRepositoryEloquent extends BaseRepository implements InfoRepository
 
     public function deleteInfo($id){
         DB::beginTransaction();
-        $this->delete($id);
-        if (DB::table('collects')->where('info_id', $id)->delete()){
+        DB::table('collects')->where('info_id', $id)->delete();
+        if ($this->delete($id)){
             DB::commit();
             return true;
         }else{
