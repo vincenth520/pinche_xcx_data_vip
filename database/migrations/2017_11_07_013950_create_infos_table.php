@@ -30,6 +30,8 @@ class CreateInfosTable extends Migration
             $table->integer('see')->default(0);
             $table->string('price')->default('')->nullable();
             $table->tinyInteger('goods')->default(0);
+            $table->string('departureTopSet')->default('')->nullable();
+            $table->string('destinationTopSet')->default('')->nullable();
             $table->timestamps();
         });
     }
