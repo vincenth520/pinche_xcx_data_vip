@@ -67,6 +67,7 @@ class InfoRepositoryEloquent extends BaseRepository implements InfoRepository
                 ->where('leave_time','>',date('Y-m-d H:i:s',time()))
                 ->where('leave_time','<',$data['date'])
                 ->where('infos.status',1)
+                ->orderBy('infos.mode','desc')
                 ->orderBy('infos.leave_time','asc')
                 ->leftJoin('customers', 'customers.id', '=', 'infos.user_id')
                 ->paginate(15,$columns = ['infos.*','customers.nickName','customers.avatarUrl']);
