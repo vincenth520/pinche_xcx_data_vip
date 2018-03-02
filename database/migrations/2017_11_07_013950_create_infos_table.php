@@ -32,6 +32,7 @@ class CreateInfosTable extends Migration
             $table->tinyInteger('goods')->default(0);
             $table->string('departureTopSet')->default('')->nullable();
             $table->string('destinationTopSet')->default('')->nullable();
+            $table->tinyInteger('mode')->default(1);
             $table->timestamps();
         });
     }
