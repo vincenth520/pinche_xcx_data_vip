@@ -53,7 +53,7 @@ class CustomerRepositoryEloquent extends BaseRepository implements CustomerRepos
     }
 
     public function getAuthenticationDriver($data){
-        return Customer::where('driver',2)->paginate($data['size']);
+        return Customer::where('driver',(isset($data['status'])?$data['status']:2))->paginate($data['size']);
     }
 
 
