@@ -71626,7 +71626,7 @@ var render = function() {
                       return [
                         _vm._v(
                           "\n                    " +
-                            _vm._s(scope.row.type == 1 ? "人找车" : "车找人") +
+                            _vm._s(scope.row.type == 2 ? "人找车" : "车找人") +
                             "\n                "
                         )
                       ]

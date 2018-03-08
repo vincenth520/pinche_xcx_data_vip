@@ -64,9 +64,11 @@ class InfoRepositoryEloquent extends BaseRepository implements InfoRepository
     public function getLists($data){
         return Info::where('departure','like','%'.$data['start'].'%')
                 ->where('destination','like','%'.$data['over'].'%')
-                ->where('leave_time','>',date('Y-m-d H:i:s',time()))
-                ->where('leave_time','<',$data['date'])
+                ->where('leave_time','>',date('Y-m-d H:i:s',time()))                
                 ->where('infos.status',1)
+                ->where(function ($query) use ($data) {
+			        $query->where('leave_time','<',$data['date'])->orWhere('infos.mode', '=', "2");
+			    })
                 ->orderBy('infos.mode','desc')
                 ->orderBy('infos.leave_time','asc')
                 ->leftJoin('customers', 'customers.id', '=', 'infos.user_id')
