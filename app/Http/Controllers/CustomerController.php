@@ -62,7 +62,7 @@ class CustomerController
     }
 
     public function editUser(Request $request){
-        if ($request->has('phone')){
+        if ($request->has('phone') && getConfig('sms_status')){
             if (!Sms::vaildCode($request->get('phone'),$request->get('verification'))){
                 return responseJson(false,'验证码错误','',401);
             }

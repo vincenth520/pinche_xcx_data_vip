@@ -46,6 +46,7 @@ $api->version('v1', function ($api) {
     $api->post('customer/login', 'App\Http\Controllers\CustomerController@login');
 
     $api->post('banner', 'App\Http\Controllers\BannersController@index');
+    $api->get('config', 'App\Http\Controllers\ConfigController@index');
     $api->group(['middleware' => 'sk'], function ($api) {
         $api->get('/article/{id}', 'App\Http\Controllers\Admin\ArticlesController@show');
 

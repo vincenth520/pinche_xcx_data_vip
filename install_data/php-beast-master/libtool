@@ -30,10 +30,10 @@
 # the same distribution terms that you use for the rest of that program.
 
 # A sed program that does not truncate output.
-SED="/bin/sed"
+SED="/usr/bin/sed"
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
-Xsed="/bin/sed -e 1s/^X//"
+Xsed="/usr/bin/sed -e 1s/^X//"
 
 # The HP-UX ksh and POSIX shell print the target directory to stdout
 # if CDPATH is set.
@@ -44,7 +44,7 @@ available_tags=""
 
 # ### BEGIN LIBTOOL CONFIG
 
-# Libtool was configured on host jdu4e00u53f7.jcloud.local:
+# Libtool was configured on host izj6ccc8lqn2ld54nkc1y2z:
 
 # Shell to use when invoking shell scripts.
 SHELL="/bin/sh"
@@ -94,7 +94,7 @@ CC="cc"
 with_gcc=yes
 
 # An ERE matcher.
-EGREP="/bin/grep -E"
+EGREP="/usr/bin/grep -E"
 
 # The linker used to build libraries.
 LD="/usr/bin/ld -m elf_x86_64"
@@ -147,7 +147,7 @@ pic_flag=" -fPIC -DPIC"
 pic_mode=default
 
 # What is the maximum length of a command?
-max_cmd_len=1966080
+max_cmd_len=1572864
 
 # Does compiler simultaneously support -c and -o options?
 compiler_c_o="yes"
@@ -329,10 +329,10 @@ variables_saved_for_relink="PATH LD_LIBRARY_PATH LD_RUN_PATH GCC_EXEC_PREFIX COM
 link_all_deplibs=unknown
 
 # Compile-time system search path for libraries
-sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/4.4.7 /usr/lib64 /lib64"
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/4.8.5 /usr/lib64 /lib64"
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/local/freetype/lib     /usr/local/mysql/lib     /usr/local/lib /usr/lib64/tcl8.5 /lib /usr/lib /usr/lib64 /usr/local/lib "
+sys_lib_dlsearch_path_spec="/lib /usr/lib     /www/server/mysql/lib     /usr/local/lib /usr/local/openssl/lib /usr/lib64/tcl8.5 "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""

@@ -1,11 +1,11 @@
-srcdir = /home/wwwroot/pinche.codems.cn/install_data/php-beast-master
-builddir = /home/wwwroot/pinche.codems.cn/install_data/php-beast-master
-top_srcdir = /home/wwwroot/pinche.codems.cn/install_data/php-beast-master
-top_builddir = /home/wwwroot/pinche.codems.cn/install_data/php-beast-master
-EGREP = /bin/grep -E
-SED = /bin/sed
-CONFIGURE_COMMAND = './configure' '--with-php-config=/usr/local/php/bin/php-config'
-CONFIGURE_OPTIONS = '--with-php-config=/usr/local/php/bin/php-config'
+srcdir = /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master
+builddir = /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master
+top_srcdir = /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master
+top_builddir = /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master
+EGREP = /usr/bin/grep -E
+SED = /usr/bin/sed
+CONFIGURE_COMMAND = './configure' '--with-php-config=/www/server/php/71/bin/php-config'
+CONFIGURE_OPTIONS = '--with-php-config=/www/server/php/71/bin/php-config'
 SHLIB_SUFFIX_NAME = so
 SHLIB_DL_SUFFIX_NAME = so
 ZEND_EXT_TYPE = zend_extension
@@ -17,12 +17,12 @@ PHP_MODULES = $(phplibdir)/beast.la
 PHP_ZEND_EX =
 all_targets = $(PHP_MODULES) $(PHP_ZEND_EX)
 install_targets = install-modules install-headers
-prefix = /usr/local/php
+prefix = /www/server/php/71
 exec_prefix = $(prefix)
 libdir = ${exec_prefix}/lib
-prefix = /usr/local/php
-phplibdir = /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/modules
-phpincludedir = /usr/local/php/include/php
+prefix = /www/server/php/71
+phplibdir = /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/modules
+phpincludedir = /www/server/php/71/include/php
 CC = cc
 CFLAGS = -g -O2
 CFLAGS_CLEAN = $(CFLAGS)
@@ -31,11 +31,11 @@ CPPFLAGS = -DHAVE_CONFIG_H
 CXX =
 CXXFLAGS =
 CXXFLAGS_CLEAN = $(CXXFLAGS)
-EXTENSION_DIR = /usr/local/php/lib/php/extensions/no-debug-non-zts-20160303
-PHP_EXECUTABLE = /usr/local/php/bin/php
+EXTENSION_DIR = /www/server/php/71/lib/php/extensions/no-debug-non-zts-20160303
+PHP_EXECUTABLE = /www/server/php/71/bin/php
 EXTRA_LDFLAGS =
 EXTRA_LIBS =
-INCLUDES = -I/usr/local/php/include/php -I/usr/local/php/include/php/main -I/usr/local/php/include/php/TSRM -I/usr/local/php/include/php/Zend -I/usr/local/php/include/php/ext -I/usr/local/php/include/php/ext/date/lib
+INCLUDES = -I/www/server/php/71/include/php -I/www/server/php/71/include/php/main -I/www/server/php/71/include/php/TSRM -I/www/server/php/71/include/php/Zend -I/www/server/php/71/include/php/ext -I/www/server/php/71/include/php/ext/date/lib
 LFLAGS =
 LDFLAGS =
 SHARED_LIBTOOL =
@@ -189,36 +189,36 @@ prof-use:
 
 .PHONY: all clean install distclean test prof-gen prof-clean prof-use
 .NOEXPORT:
-beast.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/beast.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/beast.c -o beast.lo 
-aes_algo_handler.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/aes_algo_handler.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/aes_algo_handler.c -o aes_algo_handler.lo 
-des_algo_handler.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/des_algo_handler.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/des_algo_handler.c -o des_algo_handler.lo 
-base64_algo_handler.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/base64_algo_handler.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/base64_algo_handler.c -o base64_algo_handler.lo 
-beast_mm.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/beast_mm.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/beast_mm.c -o beast_mm.lo 
-spinlock.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/spinlock.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/spinlock.c -o spinlock.lo 
-cache.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/cache.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/cache.c -o cache.lo 
-beast_log.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/beast_log.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/beast_log.c -o beast_log.lo 
-global_algo_modules.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/global_algo_modules.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/global_algo_modules.c -o global_algo_modules.lo 
-header.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/header.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/header.c -o header.lo 
-networkcards.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/networkcards.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/networkcards.c -o networkcards.lo 
-tmpfile_file_handler.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/tmpfile_file_handler.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/tmpfile_file_handler.c -o tmpfile_file_handler.lo 
-pipe_file_handler.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/pipe_file_handler.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/pipe_file_handler.c -o pipe_file_handler.lo 
-file_handler_switch.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/file_handler_switch.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/file_handler_switch.c -o file_handler_switch.lo 
-shm.lo: /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/shm.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/wwwroot/pinche.codems.cn/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/wwwroot/pinche.codems.cn/install_data/php-beast-master/shm.c -o shm.lo 
+beast.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/beast.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/beast.c -o beast.lo 
+aes_algo_handler.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/aes_algo_handler.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/aes_algo_handler.c -o aes_algo_handler.lo 
+des_algo_handler.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/des_algo_handler.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/des_algo_handler.c -o des_algo_handler.lo 
+base64_algo_handler.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/base64_algo_handler.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/base64_algo_handler.c -o base64_algo_handler.lo 
+beast_mm.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/beast_mm.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/beast_mm.c -o beast_mm.lo 
+spinlock.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/spinlock.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/spinlock.c -o spinlock.lo 
+cache.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/cache.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/cache.c -o cache.lo 
+beast_log.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/beast_log.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/beast_log.c -o beast_log.lo 
+global_algo_modules.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/global_algo_modules.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/global_algo_modules.c -o global_algo_modules.lo 
+header.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/header.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/header.c -o header.lo 
+networkcards.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/networkcards.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/networkcards.c -o networkcards.lo 
+tmpfile_file_handler.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/tmpfile_file_handler.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/tmpfile_file_handler.c -o tmpfile_file_handler.lo 
+pipe_file_handler.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/pipe_file_handler.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/pipe_file_handler.c -o pipe_file_handler.lo 
+file_handler_switch.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/file_handler_switch.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/file_handler_switch.c -o file_handler_switch.lo 
+shm.lo: /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/shm.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/shm.c -o shm.lo 
 $(phplibdir)/beast.la: ./beast.la
 	$(LIBTOOL) --mode=install cp ./beast.la $(phplibdir)
 

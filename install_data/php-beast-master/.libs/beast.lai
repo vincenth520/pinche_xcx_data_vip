@@ -32,4 +32,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/wwwroot/pinche.codems.cn/install_data/php-beast-master/modules'
+libdir='/www/wwwroot/pinche_xcx_data_vip/install_data/php-beast-master/modules'

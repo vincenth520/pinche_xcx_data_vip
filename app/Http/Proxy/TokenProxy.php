@@ -64,7 +64,6 @@ class TokenProxy
         $response = $this->http->post(request()->root().'/oauth/token',[
             'form_params' => $data
         ]);
-
         $token = json_decode((string) $response->getBody(),true);
         return response()->json([
             'token' => $token['access_token'],
