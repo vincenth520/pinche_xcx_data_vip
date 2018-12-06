@@ -58,8 +58,25 @@ class DriverRepositoryEloquent extends BaseRepository implements DriverRepositor
             'idcard2'=> 'required'
         ];
 
+        $name = [
+            'name' => '姓名',
+            'idnumber'  => '身份证号',
+            'province'=> '城市',
+            'city'=> '城市',
+            'county'=> '城市',
+            'firstgetdate'=> '驾照领取日期',
+            'platenumber'=> '车牌号',
+            'vehicle'=> '车型',
+            'color'=> '颜色',
+            'owner'=> '车辆所有人',
+            'cargetdate'=> '车辆注册日期',
+            'driverlicense'=> '驾照照片',
+            'drivinglicense'=> '行驶证照片',
+            'idcard1'=> '身份证照片正面',
+            'idcard2'=> '身份证照片反面'
+        ];
 
-        $validator = app('validator')->make($data, $rules);
+        $validator = app('validator')->make($data, $rules,[],$name);
 
         if ($validator->fails()) {
             throw new StoreResourceFailedException('Please check your input.', $validator->errors());

@@ -14,10 +14,13 @@ class DriverController extends Controller
     }
 
     public function authentication(Request $request){
-        if ($this->driverRepositoryEloquent->authentication($request->all())){
+        try{
+            $this->driverRepositoryEloquent->authentication($request->all());
             return responseJson(true,'提交成功');
         }
-        return responseJson(false,'提交失败',[],422);
+        catch(Exception $e){
+            return responseJson(false,$e->getMessage(),[],422);
+        }
     }
 
     public function getAuthentication(Request $request){

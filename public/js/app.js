@@ -63213,7 +63213,8 @@ var UNSET_AUTH_USER = 'UNSET_AUTH_USER';
             return axios.post('login', formData).then(function (response) {
                 dispatch('loginSuccess', response.data);
             }).catch(function (error) {
-                console.log(error.response.data.message);
+                var err;
+                throw err = new Error(error.response.data.message);
             });
         },
         loginSuccess: function loginSuccess(_ref2, tokenResponse) {
@@ -63583,7 +63584,7 @@ var render = function() {
           "a",
           {
             staticClass: "dashboard-stat dashboard-stat-v2 blue",
-            attrs: { href: "#" }
+            attrs: { href: "/info" }
           },
           [
             _vm._m(1),
@@ -63606,7 +63607,7 @@ var render = function() {
           "a",
           {
             staticClass: "dashboard-stat dashboard-stat-v2 red",
-            attrs: { href: "#" }
+            attrs: { href: "/user" }
           },
           [
             _vm._m(2),
@@ -63629,7 +63630,7 @@ var render = function() {
           "a",
           {
             staticClass: "dashboard-stat dashboard-stat-v2 purple",
-            attrs: { href: "#" }
+            attrs: { href: "/driver" }
           },
           [
             _vm._m(3),
@@ -64036,6 +64037,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                             message: '登陆成功'
                         });
                         _this.$router.push({ 'name': 'home' });
+                    }).catch(function (err) {
+                        console.log(err.message);
+                        _this.$message.error(err.message);
                     });
                 }
             });
@@ -64391,16 +64395,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             this.$validator.validateAll().then(function (result) {
-                var loading = _this.$loading({
-                    lock: true,
-                    text: 'loading',
-                    spinner: 'el-icon-loading'
-                });
                 if (result) {
                     var formData = {
                         old_password: _this.old_password,
                         new_password: _this.new_password
                     };
+                    var loading = _this.$loading({
+                        lock: true,
+                        text: 'loading',
+                        spinner: 'el-icon-loading'
+                    });
 
                     axios.post('change_password', formData).then(function (response) {
                         loading.close();
@@ -64587,11 +64591,18 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "col-md-4" }, [
                 _c("input", {
-                  directives: [{ name: "validate", rawName: "v-validate" }],
+                  directives: [
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: { required: "true", min: 6, is: _vm.new_password },
+                      expression:
+                        "{'required': 'true', min:6,'is': new_password}"
+                    }
+                  ],
                   staticClass: "form-control",
                   attrs: {
                     id: "password3",
-                    "data-vv-rules": "required|min:6|confirmed:new_password",
                     "data-vv-as": "新密码",
                     type: "password",
                     name: "password_confirmation",
